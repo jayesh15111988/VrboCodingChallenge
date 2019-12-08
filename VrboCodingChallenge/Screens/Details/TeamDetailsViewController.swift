@@ -24,12 +24,14 @@ final class TeamDetailsViewController: UIViewController {
         static let verticalPadding: CGFloat = 24.0
         static let imageHeight: CGFloat = 230.0
         static let imageCornerRadius: CGFloat = 8.0
+        static let favoriteIconWidth: CGFloat = 20.0
+        static let favoriteIconHeight: CGFloat = 20.0
     }
 
     let barButtonImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.frame = CGRect(origin: .zero, size: CGSize(width: 30, height: 30))
+        imageView.frame = CGRect(origin: .zero, size: CGSize(width: Constants.favoriteIconWidth, height: Constants.favoriteIconHeight))
         return imageView
     }()
 

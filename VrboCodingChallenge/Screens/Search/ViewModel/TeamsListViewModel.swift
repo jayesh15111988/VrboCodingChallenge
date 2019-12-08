@@ -25,6 +25,7 @@ final class TeamsListViewModel {
     weak var view: SearchScreenViewController?
     let networkUtility: NetworkServiceable
     var viewModels: [TeamViewModel]
+    var error: LoadError?
 
     init(networkUtility: NetworkServiceable) {
         self.networkUtility = networkUtility
@@ -32,14 +33,24 @@ final class TeamsListViewModel {
     }
 
     func searchForTeamSchedule(with teamName: String) {
-        guard !teamName.isEmpty else { return }
         networkUtility.searchForTeamSchedule(with: teamName, completionHandler: { [weak self] teams in
             guard let strongSelf = self else { return }
             strongSelf.viewModels = teams.map { TeamViewModel(team: $0) }
             strongSelf.view?.update(with: strongSelf.viewModels)
-        }) { error in
-
+        }) { [weak self] error in
+            guard let strongSelf = self else { return }
+            strongSelf.error = error
+            strongSelf.view?.displayErrorMessage()
         }
+    }
+
+    func clearList() {
+        viewModels.removeAll()
+        view?.update(with: viewModels)
+    }
+
+    func triggerLoadingSpinner() {
+        view?.displayLoadingSpinner()
     }
 }
 

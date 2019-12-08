@@ -16,6 +16,13 @@ final class SearchScreenViewController: UIViewController {
     private let searchBarDelegate: SearchBarDelegate
     private let viewModel: TeamsListViewModel
 
+    private let activityIndicatorView: UIActivityIndicatorView = {
+        let activityIndicatorView = UIActivityIndicatorView(frame: .zero)
+        activityIndicatorView.style = .large
+        activityIndicatorView.color = .darkGray
+        return activityIndicatorView
+    }()
+
     private enum Constants {
         static let searchBarFieldKey = "searchField"
     }
@@ -68,15 +75,25 @@ final class SearchScreenViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.register(TeamDataTableViewCell.self, forCellReuseIdentifier: TeamDataTableViewCell.identifier)
         view.addSubview(tableView)
+        view.addSubview(activityIndicatorView)
     }
 
     private func layoutViews() {
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
+
+        // MARK: Constraints for `tableView`
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+
+        // MARK: Constraints for `activityIndicatorView`
+        NSLayoutConstraint.activate([
+            activityIndicatorView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            activityIndicatorView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
     }
 
@@ -84,6 +101,18 @@ final class SearchScreenViewController: UIViewController {
         tableViewDataSource.teamsViewModels = viewModels
         tableViewDelegate.teamsViewModels = viewModels
         tableView.reloadData()
+        activityIndicatorView.stopAnimating()
+    }
+
+    func displayErrorMessage() {
+        let alertController = UIAlertController(title: "Error", message: viewModel.error?.errorMessageString(), preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertController, animated: true)
+        activityIndicatorView.stopAnimating()
+    }
+
+    func displayLoadingSpinner() {
+        activityIndicatorView.startAnimating()
     }
 
     func makeTransitionToDetailScreen(with viewController: UIViewController) {

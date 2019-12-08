@@ -17,6 +17,11 @@ final class SearchBarDelegate: NSObject, UISearchBarDelegate {
     }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.triggerLoadingSpinner()
         viewModel.searchForTeamSchedule(with: searchText)
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.clearList()
     }
 }

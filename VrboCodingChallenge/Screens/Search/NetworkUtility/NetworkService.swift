@@ -12,6 +12,17 @@ enum LoadError: Error {
     case invalidUrl
     case emptyData
     case malformedContent
+
+    func errorMessageString() -> String {
+        switch self {
+        case .invalidUrl:
+            return "Invalid URL encountered. Please check the URL and try again"
+        case .emptyData:
+            return "Empty data received."
+        case .malformedContent:
+            return "Invalid JSON received from the service. Please check your models again and make sure the format matches with the incoming JSON"
+        }
+    }
 }
 
 final class NetworkService {
