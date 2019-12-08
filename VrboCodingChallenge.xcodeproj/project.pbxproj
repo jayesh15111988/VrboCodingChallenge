@@ -3,17 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6054C757A559894E947355FA /* Pods_VrboCodingChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 986E5D8B5FD35A483AB9B2E1 /* Pods_VrboCodingChallenge.framework */; };
 		E38A1010239D5D9A009189BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A100F239D5D9A009189BB /* AppDelegate.swift */; };
 		E38A1012239D5D9A009189BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A1011239D5D9A009189BB /* SceneDelegate.swift */; };
-		E38A1014239D5D9A009189BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A1013239D5D9A009189BB /* ViewController.swift */; };
-		E38A1017239D5D9A009189BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E38A1015239D5D9A009189BB /* Main.storyboard */; };
 		E38A1019239D5D9D009189BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E38A1018239D5D9D009189BB /* Assets.xcassets */; };
 		E38A101C239D5D9D009189BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E38A101A239D5D9D009189BB /* LaunchScreen.storyboard */; };
 		E38A1027239D5D9D009189BB /* VrboCodingChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A1026239D5D9D009189BB /* VrboCodingChallengeTests.swift */; };
+		E38A1039239D6592009189BB /* SearchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A1038239D6592009189BB /* SearchScreenViewController.swift */; };
+		E38A103C239D65F5009189BB /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A103B239D65F5009189BB /* TableViewDataSource.swift */; };
+		E38A103E239D6604009189BB /* SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A103D239D6604009189BB /* SearchBarDelegate.swift */; };
+		E38A1042239D6873009189BB /* TeamDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A1041239D6873009189BB /* TeamDataTableViewCell.swift */; };
+		E38A1044239D69E0009189BB /* TeamsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A1043239D69E0009189BB /* TeamsListViewModel.swift */; };
+		E38A1046239D6B6D009189BB /* NetworkUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A1045239D6B6D009189BB /* NetworkUtility.swift */; };
+		E38A1048239D6B76009189BB /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A1047239D6B76009189BB /* NetworkService.swift */; };
+		E38A104A239D6BCB009189BB /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A1049239D6BCB009189BB /* Teams.swift */; };
+		E38A104C239D8239009189BB /* TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A104B239D8239009189BB /* TableViewDelegate.swift */; };
+		E38A1052239D9EDB009189BB /* unfavorite.png in Resources */ = {isa = PBXBuildFile; fileRef = E38A1050239D9EDB009189BB /* unfavorite.png */; };
+		E38A1071239DA81F009189BB /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = E38A1070239DA81F009189BB /* placeholder.png */; };
+		E38A1073239DAA02009189BB /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = E38A1072239DAA02009189BB /* favorite.png */; };
+		E38A1075239DAE9F009189BB /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A1074239DAE9F009189BB /* TeamDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +39,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		433AF2BCFF69D5D215C37138 /* Pods-VrboCodingChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VrboCodingChallenge.debug.xcconfig"; path = "Target Support Files/Pods-VrboCodingChallenge/Pods-VrboCodingChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		986E5D8B5FD35A483AB9B2E1 /* Pods_VrboCodingChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VrboCodingChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2F8E009C3F6D5F43ADE1E93 /* Pods-VrboCodingChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VrboCodingChallenge.release.xcconfig"; path = "Target Support Files/Pods-VrboCodingChallenge/Pods-VrboCodingChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		E38A100C239D5D9A009189BB /* VrboCodingChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VrboCodingChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38A100F239D5D9A009189BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E38A1011239D5D9A009189BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E38A1013239D5D9A009189BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E38A1016239D5D9A009189BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E38A1018239D5D9D009189BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E38A101B239D5D9D009189BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E38A101D239D5D9D009189BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E38A1022239D5D9D009189BB /* VrboCodingChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VrboCodingChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38A1026239D5D9D009189BB /* VrboCodingChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VrboCodingChallengeTests.swift; sourceTree = "<group>"; };
 		E38A1028239D5D9D009189BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E38A1038239D6592009189BB /* SearchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenViewController.swift; sourceTree = "<group>"; };
+		E38A103B239D65F5009189BB /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		E38A103D239D6604009189BB /* SearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarDelegate.swift; sourceTree = "<group>"; };
+		E38A1041239D6873009189BB /* TeamDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDataTableViewCell.swift; sourceTree = "<group>"; };
+		E38A1043239D69E0009189BB /* TeamsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsListViewModel.swift; sourceTree = "<group>"; };
+		E38A1045239D6B6D009189BB /* NetworkUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtility.swift; sourceTree = "<group>"; };
+		E38A1047239D6B76009189BB /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E38A1049239D6BCB009189BB /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
+		E38A104B239D8239009189BB /* TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDelegate.swift; sourceTree = "<group>"; };
+		E38A1050239D9EDB009189BB /* unfavorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unfavorite.png; sourceTree = "<group>"; };
+		E38A1070239DA81F009189BB /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		E38A1072239DAA02009189BB /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite.png; sourceTree = "<group>"; };
+		E38A1074239DAE9F009189BB /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6054C757A559894E947355FA /* Pods_VrboCodingChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +85,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31D25B295EB39C2E96545E3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				986E5D8B5FD35A483AB9B2E1 /* Pods_VrboCodingChallenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		522D607AB7DB3DF6914A97BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				433AF2BCFF69D5D215C37138 /* Pods-VrboCodingChallenge.debug.xcconfig */,
+				E2F8E009C3F6D5F43ADE1E93 /* Pods-VrboCodingChallenge.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E38A1003239D5D9A009189BB = {
 			isa = PBXGroup;
 			children = (
 				E38A100E239D5D9A009189BB /* VrboCodingChallenge */,
 				E38A1025239D5D9D009189BB /* VrboCodingChallengeTests */,
 				E38A100D239D5D9A009189BB /* Products */,
+				522D607AB7DB3DF6914A97BC /* Pods */,
+				31D25B295EB39C2E96545E3D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,10 +125,10 @@
 		E38A100E239D5D9A009189BB /* VrboCodingChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				E38A104E239D9E51009189BB /* Images */,
+				E38A1031239D633D009189BB /* Screens */,
 				E38A100F239D5D9A009189BB /* AppDelegate.swift */,
 				E38A1011239D5D9A009189BB /* SceneDelegate.swift */,
-				E38A1013239D5D9A009189BB /* ViewController.swift */,
-				E38A1015239D5D9A009189BB /* Main.storyboard */,
 				E38A1018239D5D9D009189BB /* Assets.xcassets */,
 				E38A101A239D5D9D009189BB /* LaunchScreen.storyboard */,
 				E38A101D239D5D9D009189BB /* Info.plist */,
@@ -99,6 +145,105 @@
 			path = VrboCodingChallengeTests;
 			sourceTree = "<group>";
 		};
+		E38A1031239D633D009189BB /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				E38A1032239D640E009189BB /* Search */,
+				E38A1033239D6419009189BB /* Details */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		E38A1032239D640E009189BB /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				E38A1040239D67FB009189BB /* TableViewCells */,
+				E38A103F239D6637009189BB /* DataSources */,
+				E38A103A239D65E7009189BB /* Delegates */,
+				E38A1037239D6441009189BB /* Model */,
+				E38A1036239D642E009189BB /* NetworkUtility */,
+				E38A1035239D6429009189BB /* ViewModel */,
+				E38A1034239D6421009189BB /* ViewController */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		E38A1033239D6419009189BB /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				E38A1074239DAE9F009189BB /* TeamDetailsViewController.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		E38A1034239D6421009189BB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E38A1038239D6592009189BB /* SearchScreenViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E38A1035239D6429009189BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E38A1043239D69E0009189BB /* TeamsListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E38A1036239D642E009189BB /* NetworkUtility */ = {
+			isa = PBXGroup;
+			children = (
+				E38A1045239D6B6D009189BB /* NetworkUtility.swift */,
+				E38A1047239D6B76009189BB /* NetworkService.swift */,
+			);
+			path = NetworkUtility;
+			sourceTree = "<group>";
+		};
+		E38A1037239D6441009189BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E38A1049239D6BCB009189BB /* Teams.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E38A103A239D65E7009189BB /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				E38A103D239D6604009189BB /* SearchBarDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		E38A103F239D6637009189BB /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				E38A103B239D65F5009189BB /* TableViewDataSource.swift */,
+				E38A104B239D8239009189BB /* TableViewDelegate.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		E38A1040239D67FB009189BB /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				E38A1041239D6873009189BB /* TeamDataTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		E38A104E239D9E51009189BB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E38A1072239DAA02009189BB /* favorite.png */,
+				E38A1050239D9EDB009189BB /* unfavorite.png */,
+				E38A1070239DA81F009189BB /* placeholder.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +251,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E38A102B239D5D9D009189BB /* Build configuration list for PBXNativeTarget "VrboCodingChallenge" */;
 			buildPhases = (
+				C8A76D33ECD58C65041565C0 /* [CP] Check Pods Manifest.lock */,
 				E38A1008239D5D9A009189BB /* Sources */,
 				E38A1009239D5D9A009189BB /* Frameworks */,
 				E38A100A239D5D9A009189BB /* Resources */,
+				370B75C697D9B6C2CB9369F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,9 +327,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E38A1052239D9EDB009189BB /* unfavorite.png in Resources */,
+				E38A1073239DAA02009189BB /* favorite.png in Resources */,
 				E38A101C239D5D9D009189BB /* LaunchScreen.storyboard in Resources */,
+				E38A1071239DA81F009189BB /* placeholder.png in Resources */,
 				E38A1019239D5D9D009189BB /* Assets.xcassets in Resources */,
-				E38A1017239D5D9A009189BB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,13 +344,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		370B75C697D9B6C2CB9369F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VrboCodingChallenge/Pods-VrboCodingChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VrboCodingChallenge/Pods-VrboCodingChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VrboCodingChallenge/Pods-VrboCodingChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8A76D33ECD58C65041565C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VrboCodingChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E38A1008239D5D9A009189BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E38A1014239D5D9A009189BB /* ViewController.swift in Sources */,
+				E38A1048239D6B76009189BB /* NetworkService.swift in Sources */,
+				E38A1039239D6592009189BB /* SearchScreenViewController.swift in Sources */,
+				E38A1042239D6873009189BB /* TeamDataTableViewCell.swift in Sources */,
+				E38A104C239D8239009189BB /* TableViewDelegate.swift in Sources */,
+				E38A103E239D6604009189BB /* SearchBarDelegate.swift in Sources */,
 				E38A1010239D5D9A009189BB /* AppDelegate.swift in Sources */,
+				E38A1044239D69E0009189BB /* TeamsListViewModel.swift in Sources */,
+				E38A103C239D65F5009189BB /* TableViewDataSource.swift in Sources */,
+				E38A104A239D6BCB009189BB /* Teams.swift in Sources */,
+				E38A1046239D6B6D009189BB /* NetworkUtility.swift in Sources */,
+				E38A1075239DAE9F009189BB /* TeamDetailsViewController.swift in Sources */,
 				E38A1012239D5D9A009189BB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,14 +425,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E38A1015239D5D9A009189BB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E38A1016239D5D9A009189BB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E38A101A239D5D9D009189BB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -360,6 +552,7 @@
 		};
 		E38A102C239D5D9D009189BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 433AF2BCFF69D5D215C37138 /* Pods-VrboCodingChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -371,12 +564,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sampleProject.VrboCodingChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		E38A102D239D5D9D009189BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2F8E009C3F6D5F43ADE1E93 /* Pods-VrboCodingChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -388,7 +582,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sampleProject.VrboCodingChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
