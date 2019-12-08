@@ -45,7 +45,7 @@ final class TeamsListViewModel {
     }
 
     func clearList() {
-        viewModels.removeAll()
+        viewModels = []
         view?.update(with: viewModels)
     }
 

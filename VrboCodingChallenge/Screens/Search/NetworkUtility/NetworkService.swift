@@ -49,6 +49,7 @@ final class NetworkService {
 
         if let previousTask = previousDataTask {
             previousTask.cancel()
+            previousDataTask = nil
         }
 
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
