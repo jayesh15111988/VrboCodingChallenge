@@ -10,15 +10,12 @@ import Foundation
 
 enum LoadError: Error {
     case invalidUrl
-    case emptyData
     case malformedContent
 
     func errorMessageString() -> String {
         switch self {
         case .invalidUrl:
             return "Invalid URL encountered. Please check the URL and try again"
-        case .emptyData:
-            return "Empty data received."
         case .malformedContent:
             return "Invalid JSON received from the service. Please check your models again and make sure the format matches with the incoming JSON"
         }
@@ -37,6 +34,8 @@ final class NetworkService {
         case query = "q"
     }
 
+    static var previousDataTask: URLSessionDataTask?
+
     static func loadData(with searchTerm: String, completionHandler: @escaping ([Team]) -> Void, errorHandler: @escaping (LoadError) -> Void) {
 
         let queryItems = [URLQueryItem(name: Keys.clientId.rawValue, value: Constants.clientToken), URLQueryItem(name: Keys.query.rawValue, value: searchTerm)]
@@ -48,9 +47,12 @@ final class NetworkService {
             return
         }
 
+        if let previousTask = previousDataTask {
+            previousTask.cancel()
+        }
+
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else {
-                errorHandler(.emptyData)
                 return
             }
 
@@ -64,5 +66,6 @@ final class NetworkService {
             }
         }
         task.resume()
+        previousDataTask = task
     }
 }
