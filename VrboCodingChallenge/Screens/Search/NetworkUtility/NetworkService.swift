@@ -47,6 +47,7 @@ final class NetworkService {
             return
         }
 
+        // If the new task is created while old task was in flight, cancel the previous task to make a space for newly added task
         if let previousTask = previousDataTask {
             previousTask.cancel()
             previousDataTask = nil
@@ -67,6 +68,8 @@ final class NetworkService {
             }
         }
         task.resume()
+
+        // Store the newly created task with a reference in `previousDataTask`. If multiple tasks are being created, we can reference old task and cancel it
         previousDataTask = task
     }
 }

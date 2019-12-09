@@ -10,10 +10,11 @@ import XCTest
 @testable import VrboCodingChallenge
 
 final class TeamsListViewModelTests: XCTestCase {
+
     func testTheBehaviorWhenNonEmptyDataModelsAreFetched() {
         let networkUtility = ValidDataLoaderNetworkUtility()
         let teamListViewModel = TeamsListViewModel(networkUtility: networkUtility)
-        teamListViewModel.searchForTeamSchedule(with: "abc")
+        teamListViewModel.searchForEvents(with: "abc")
 
         XCTAssertEqual(teamListViewModel.viewModels.count, 2)
         XCTAssertNil(teamListViewModel.error)
@@ -22,7 +23,7 @@ final class TeamsListViewModelTests: XCTestCase {
     func testTheBehaviorWhenErrorOccursWhileFetchingDataFromServer() {
         let networkUtility = MalformedDataLoaderNetworkUtility()
         let teamListViewModel = TeamsListViewModel(networkUtility: networkUtility)
-        teamListViewModel.searchForTeamSchedule(with: "abc")
+        teamListViewModel.searchForEvents(with: "abc")
 
         XCTAssertTrue(teamListViewModel.viewModels.isEmpty)
         XCTAssertNotNil(teamListViewModel.error)
@@ -32,7 +33,7 @@ final class TeamsListViewModelTests: XCTestCase {
     func testThatViewModelClearsTheListOfOldViewModels() {
         let networkUtility = ValidDataLoaderNetworkUtility()
         let teamListViewModel = TeamsListViewModel(networkUtility: networkUtility)
-        teamListViewModel.searchForTeamSchedule(with: "abc")
+        teamListViewModel.searchForEvents(with: "abc")
 
         XCTAssertEqual(teamListViewModel.viewModels.count, 2)
 
@@ -53,4 +54,5 @@ final class TeamsListViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.formattedLocation, "City 1, State 1")
         XCTAssertFalse(viewModel.isFavorited)
     }
+
 }

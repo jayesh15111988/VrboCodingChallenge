@@ -32,8 +32,8 @@ final class TeamsListViewModel {
         self.viewModels = []
     }
 
-    func searchForTeamSchedule(with teamName: String) {
-        networkUtility.searchForTeamSchedule(with: teamName, completionHandler: { [weak self] teams in
+    func searchForEvents(with searchTerm: String) {
+        networkUtility.searchForEvents(with: searchTerm, completionHandler: { [weak self] teams in
             guard let strongSelf = self else { return }
             strongSelf.viewModels = teams.map { TeamViewModel(team: $0) }
             strongSelf.error = nil

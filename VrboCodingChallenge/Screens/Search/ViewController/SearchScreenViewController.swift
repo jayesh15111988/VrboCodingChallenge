@@ -53,10 +53,25 @@ final class SearchScreenViewController: UIViewController {
 
     private func setupViews() {
 
+        view.backgroundColor = .white
+
         // Associating tableviewDelegate with self to be able to perform the view transition
         tableViewDelegate.view = self
 
         // MARK: Search bar set up
+        setupSearchBar()
+
+        // Mark: Setting up search bar on the navigation bar
+        setupNavigationBar()
+
+        // MARK: Table view set up
+        setupTableView()
+
+        view.addSubview(tableView)
+        view.addSubview(activityIndicatorView)
+    }
+
+    private func setupSearchBar() {
         definesPresentationContext = true
         searchBarController.hidesNavigationBarDuringPresentation = false
         searchBarController.obscuresBackgroundDuringPresentation = false
@@ -66,17 +81,17 @@ final class SearchScreenViewController: UIViewController {
 
         let searchBarTextField = searchBarController.searchBar.value(forKey: Constants.searchBarFieldKey) as? UITextField
         searchBarTextField?.textColor = .white
+    }
 
-        // Mark: Setting up search bar on the navigation bar
+    private func setupNavigationBar() {
         navigationItem.titleView = searchBarController.searchBar
+    }
 
-        // MARK: Table view set up
+    private func setupTableView() {
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.estimatedRowHeight = Constants.estimatedRowHeight
         tableView.rowHeight = UITableView.automaticDimension
         tableView.register(TeamDataTableViewCell.self, forCellReuseIdentifier: TeamDataTableViewCell.identifier)
-        view.addSubview(tableView)
-        view.addSubview(activityIndicatorView)
     }
 
     private func layoutViews() {

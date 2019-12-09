@@ -21,11 +21,15 @@ final class TeamDataTableViewCell: UITableViewCell {
         static let outerHorizontalPadding: CGFloat = 24.0
         static let outerVerticalPadding: CGFloat = 24.0
         static let innerVerticalPadding: CGFloat = 8.0
+
         static let imageWidth: CGFloat = 60.0
         static let imageHeight: CGFloat = 60.0
+
         static let favoritesIconHeight: CGFloat = 20.0
         static let favoritesIconWidth: CGFloat = 20.0
+
         static let imageCornerRadius: CGFloat = 8.0
+
         static let favoriteIconOffset: CGFloat = 8.0
     }
 
@@ -80,7 +84,6 @@ final class TeamDataTableViewCell: UITableViewCell {
         contentView.addSubview(locationDetailsLabel)
         contentView.addSubview(dateTimeLabel)
 
-        favoriteIconView.isUserInteractionEnabled = true
         favoriteIconView.addTarget(self, action: #selector(favoriteIconTapped), for: .touchUpInside)
     }
 
@@ -144,8 +147,8 @@ final class TeamDataTableViewCell: UITableViewCell {
         dateTimeLabel.text = viewModel.formattedDateTime
     }
 
-    func update(with isFavorited: Bool) {
-        let favoriteIconImage = isFavorited ? UIImage(named: ImageNames.favorite.rawValue) : UIImage(named: ImageNames.unfavorite.rawValue)
+    func update(with isFavoritedFlag: Bool) {
+        let favoriteIconImage = isFavoritedFlag ? UIImage(named: ImageNames.favorite.rawValue) : UIImage(named: ImageNames.unfavorite.rawValue)
         favoriteIconView.setImage(favoriteIconImage, for: .normal)
     }
 

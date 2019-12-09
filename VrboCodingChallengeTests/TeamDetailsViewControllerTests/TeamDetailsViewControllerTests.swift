@@ -10,6 +10,7 @@ import XCTest
 @testable import VrboCodingChallenge
 
 final class TeamDetailsViewControllerTests: XCTestCase {
+
     func testThatViewModelGetsCorrectlyAppliedToTeamDetailsViewControllerInDefaultState() {
         let viewModelForViewController = TeamViewModel(team: Team(id: 100, title: "My Team", venue: Venue(city: "Boston", state: "MA"), dateTimeLocalString: "2019-12-08T03:30:00", performers: []))
         let viewController = TeamDetailsViewController(viewModel: viewModelForViewController)
@@ -19,6 +20,7 @@ final class TeamDetailsViewControllerTests: XCTestCase {
         XCTAssertEqual(viewController.title, "My Team")
         XCTAssertEqual(viewController.dateTimeLabel.text, "Sun, 8 Dec 2019 3:30 AM")
         XCTAssertEqual(viewController.locationDetailsLabel.text, "Boston, MA")
+
     }
 
     func testThatViewModelGetsCorrectlyAppliedToTeamDetailsViewControllerInFavoritedState() {
@@ -33,4 +35,5 @@ final class TeamDetailsViewControllerTests: XCTestCase {
         XCTAssertEqual(viewController.locationDetailsLabel.text, "Brookline, MA")
 
     }
+
 }

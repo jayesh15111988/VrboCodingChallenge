@@ -21,7 +21,7 @@ final class TeamDetailsViewController: UIViewController {
 
     private enum Constants {
         static let horizontalPadding: CGFloat = 24.0
-        static let verticalPadding: CGFloat = 24.0
+        static let verticalPadding: CGFloat = 8.0
         static let imageHeight: CGFloat = 230.0
         static let imageCornerRadius: CGFloat = 8.0
         static let favoriteIconWidth: CGFloat = 20.0

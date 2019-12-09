@@ -10,7 +10,9 @@ import XCTest
 @testable import VrboCodingChallenge
 
 final class MalformedDataLoaderNetworkUtility: NetworkServiceable {
-    func searchForTeamSchedule(with teamName: String, completionHandler: @escaping ([Team]) -> Void, errorHandler: @escaping (LoadError) -> Void) {
+
+    func searchForEvents(with searchTerm: String, completionHandler: @escaping ([Team]) -> Void, errorHandler: @escaping (LoadError) -> Void) {
         errorHandler(.malformedContent)
     }
+
 }

@@ -10,6 +10,7 @@ import XCTest
 @testable import VrboCodingChallenge
 
 final class TeamDataTableViewCellTests: XCTestCase {
+
     func testThatViewModelIsCorrectlyAppliedToTableViewCellWhenInDefaultState() {
         let cell = TeamDataTableViewCell(style: .default, reuseIdentifier: nil)
         let cellViewModel = TeamViewModel(team: Team(id: 100, title: "My Team", venue: Venue(city: "Boston", state: "MA"), dateTimeLocalString: "2019-12-08T03:30:00", performers: []))
@@ -34,4 +35,9 @@ final class TeamDataTableViewCellTests: XCTestCase {
         XCTAssertEqual(cell.locationDetailsLabel.text, "Chicago, IL")
         XCTAssertEqual(cell.dateTimeLabel.text, "Tue, 8 Jan 2019 3:30 AM")
     }
+
+    func testThatCellHasExpectedValueOfAnIdentifier() {
+        XCTAssertEqual(TeamDataTableViewCell.identifier, "TeamDataTableViewCell")
+    }
+
 }

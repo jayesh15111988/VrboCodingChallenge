@@ -9,12 +9,12 @@
 import Foundation
 
 protocol NetworkServiceable {
-    func searchForTeamSchedule(with teamName: String, completionHandler: @escaping ([Team]) -> Void, errorHandler: @escaping (LoadError) -> Void)
+    func searchForEvents(with searchTerm: String, completionHandler: @escaping ([Team]) -> Void, errorHandler: @escaping (LoadError) -> Void)
 }
 
 final class NetworkUtility: NetworkServiceable {
-    func searchForTeamSchedule(with teamName: String, completionHandler: @escaping ([Team]) -> Void, errorHandler: @escaping (LoadError) -> Void) {
-        NetworkService.loadData(with: teamName, completionHandler: { teams in
+    func searchForEvents(with searchTerm: String, completionHandler: @escaping ([Team]) -> Void, errorHandler: @escaping (LoadError) -> Void) {
+        NetworkService.loadData(with: searchTerm, completionHandler: { teams in
             DispatchQueue.main.async {
                 completionHandler(teams)
             }
