@@ -35,7 +35,7 @@ final class TeamDetailsViewController: UIViewController {
         return imageView
     }()
 
-    let imageView: UIImageView = {
+    private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
@@ -43,14 +43,14 @@ final class TeamDetailsViewController: UIViewController {
         return imageView
     }()
 
-    private let dateTimeLabel: UILabel = {
+    let dateTimeLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.font = UIFont.boldSystemFont(ofSize: 24)
         return label
     }()
 
-    private let locationDetailsLabel: UILabel = {
+    let locationDetailsLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 14)
@@ -114,7 +114,7 @@ final class TeamDetailsViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: barButtonImageView)
     }
 
-    private func applyViewModel() {
+    func applyViewModel() {
         title = viewModel.title
         barButtonImageView.image = viewModel.isFavorited ? UIImage(named: ImageNames.favorite.rawValue) : UIImage(named: ImageNames.unfavorite.rawValue)
         imageView.pin_setImage(from: viewModel.imageUrl, placeholderImage: UIImage(named: ImageNames.placeholder.rawValue))

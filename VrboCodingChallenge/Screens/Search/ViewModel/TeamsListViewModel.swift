@@ -36,10 +36,12 @@ final class TeamsListViewModel {
         networkUtility.searchForTeamSchedule(with: teamName, completionHandler: { [weak self] teams in
             guard let strongSelf = self else { return }
             strongSelf.viewModels = teams.map { TeamViewModel(team: $0) }
+            strongSelf.error = nil
             strongSelf.view?.update(with: strongSelf.viewModels)
         }) { [weak self] error in
             guard let strongSelf = self else { return }
             strongSelf.error = error
+            strongSelf.viewModels = []
             strongSelf.view?.displayErrorMessage()
         }
     }

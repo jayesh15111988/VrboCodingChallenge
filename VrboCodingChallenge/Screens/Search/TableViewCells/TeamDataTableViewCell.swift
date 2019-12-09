@@ -39,19 +39,19 @@ final class TeamDataTableViewCell: UITableViewCell {
         return imageView
     }()
 
-    private let favoriteIconView: UIButton = {
+    let favoriteIconView: UIButton = {
         let button = UIButton()
         return button
     }()
 
-    private let titleLabel: UILabel = {
+    let titleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.font = UIFont.boldSystemFont(ofSize: 16)
         return label
     }()
 
-    private let locationDetailsLabel: UILabel = {
+    let locationDetailsLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 14)
@@ -59,7 +59,7 @@ final class TeamDataTableViewCell: UITableViewCell {
         return label
     }()
 
-    private let dateTimeLabel: UILabel = {
+    let dateTimeLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 14)

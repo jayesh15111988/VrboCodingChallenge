@@ -25,6 +25,7 @@ final class SearchScreenViewController: UIViewController {
 
     private enum Constants {
         static let searchBarFieldKey = "searchField"
+        static let estimatedRowHeight: CGFloat = 44.0
     }
 
     private enum Colors {
@@ -71,7 +72,7 @@ final class SearchScreenViewController: UIViewController {
 
         // MARK: Table view set up
         tableView.tableFooterView = UIView(frame: .zero)
-        tableView.estimatedRowHeight = 44.0
+        tableView.estimatedRowHeight = Constants.estimatedRowHeight
         tableView.rowHeight = UITableView.automaticDimension
         tableView.register(TeamDataTableViewCell.self, forCellReuseIdentifier: TeamDataTableViewCell.identifier)
         view.addSubview(tableView)

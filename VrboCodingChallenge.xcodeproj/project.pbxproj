@@ -26,6 +26,11 @@
 		E38A1071239DA81F009189BB /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = E38A1070239DA81F009189BB /* placeholder.png */; };
 		E38A1073239DAA02009189BB /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = E38A1072239DAA02009189BB /* favorite.png */; };
 		E38A1075239DAE9F009189BB /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A1074239DAE9F009189BB /* TeamDetailsViewController.swift */; };
+		E38A107A239DDDF5009189BB /* TeamDataTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A1079239DDDF5009189BB /* TeamDataTableViewCellTests.swift */; };
+		E38A107D239DE0C9009189BB /* TeamDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A107C239DE0C9009189BB /* TeamDetailsViewControllerTests.swift */; };
+		E38A1081239DE470009189BB /* ValidDataLoaderNetworkUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A1080239DE470009189BB /* ValidDataLoaderNetworkUtility.swift */; };
+		E38A1083239DE484009189BB /* MalformedDataLoaderNetworkUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A1082239DE484009189BB /* MalformedDataLoaderNetworkUtility.swift */; };
+		E38A1086239DE54D009189BB /* TeamsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A1085239DE54D009189BB /* TeamsListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +69,11 @@
 		E38A1070239DA81F009189BB /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		E38A1072239DAA02009189BB /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite.png; sourceTree = "<group>"; };
 		E38A1074239DAE9F009189BB /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
+		E38A1079239DDDF5009189BB /* TeamDataTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDataTableViewCellTests.swift; sourceTree = "<group>"; };
+		E38A107C239DE0C9009189BB /* TeamDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewControllerTests.swift; sourceTree = "<group>"; };
+		E38A1080239DE470009189BB /* ValidDataLoaderNetworkUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidDataLoaderNetworkUtility.swift; sourceTree = "<group>"; };
+		E38A1082239DE484009189BB /* MalformedDataLoaderNetworkUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MalformedDataLoaderNetworkUtility.swift; sourceTree = "<group>"; };
+		E38A1085239DE54D009189BB /* TeamsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +149,10 @@
 		E38A1025239D5D9D009189BB /* VrboCodingChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				E38A1084239DE542009189BB /* TeamsListViewModelTests */,
+				E38A107F239DE45C009189BB /* MockNetworkUtilities */,
+				E38A107B239DE0BF009189BB /* TeamDetailsViewControllerTests */,
+				E38A1078239DDDE5009189BB /* TableViewCells */,
 				E38A1026239D5D9D009189BB /* VrboCodingChallengeTests.swift */,
 				E38A1028239D5D9D009189BB /* Info.plist */,
 			);
@@ -242,6 +256,39 @@
 				E38A1070239DA81F009189BB /* placeholder.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		E38A1078239DDDE5009189BB /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				E38A1079239DDDF5009189BB /* TeamDataTableViewCellTests.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		E38A107B239DE0BF009189BB /* TeamDetailsViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				E38A107C239DE0C9009189BB /* TeamDetailsViewControllerTests.swift */,
+			);
+			path = TeamDetailsViewControllerTests;
+			sourceTree = "<group>";
+		};
+		E38A107F239DE45C009189BB /* MockNetworkUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				E38A1080239DE470009189BB /* ValidDataLoaderNetworkUtility.swift */,
+				E38A1082239DE484009189BB /* MalformedDataLoaderNetworkUtility.swift */,
+			);
+			path = MockNetworkUtilities;
+			sourceTree = "<group>";
+		};
+		E38A1084239DE542009189BB /* TeamsListViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				E38A1085239DE54D009189BB /* TeamsListViewModelTests.swift */,
+			);
+			path = TeamsListViewModelTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,7 +457,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E38A107A239DDDF5009189BB /* TeamDataTableViewCellTests.swift in Sources */,
+				E38A1083239DE484009189BB /* MalformedDataLoaderNetworkUtility.swift in Sources */,
+				E38A1081239DE470009189BB /* ValidDataLoaderNetworkUtility.swift in Sources */,
+				E38A107D239DE0C9009189BB /* TeamDetailsViewControllerTests.swift in Sources */,
 				E38A1027239D5D9D009189BB /* VrboCodingChallengeTests.swift in Sources */,
+				E38A1086239DE54D009189BB /* TeamsListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
